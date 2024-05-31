@@ -4,7 +4,7 @@ an extended AVBMC code to calculate free-energy of water using an all-atom Vashi
 Initial code is based on the work of [Loeffler et al.](https://github.com/mrnucleation/NucleationSimulationMC). We added the Vashishta potential, modified the acceptance rule, and added the ability to update the topology of the system if translation is accepted.  
 
 
-![Silica-water system.](./66_cluster.png) 
+![Silica-water system.](./data/66_cluster.png) 
 
 
 # Compilation 
