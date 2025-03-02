@@ -18,3 +18,5 @@ make
 You need a script file. Samples of how this scriptfiles looks like is given in the `example` folder.
 
 
+# Code Map
+You can find the code map at the following Coggle link: [Code Map](https://coggle.it/diagram/ZDo1BgAjwnrfugDE/t/vashishta)
