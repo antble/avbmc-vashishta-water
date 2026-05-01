@@ -1,5 +1,7 @@
 # EB-AVBMC for Water using Vashishta potential 
-an extended AVBMC code to calculate free-energy of water using an all-atom Vashishta potential. 
+An extended AVBMC code to calculate free-energy of water using an all-atom Vashishta potential. 
+
+This work is a part of the paper [**An Extended Energy-Biased Aggregation-Volume-Bias Monte Carlo (EB-AVBMC) Method for Nucleation Simulation of a Reactive Water Potential**](https://pubs.acs.org/doi/10.1021/acs.jctc.5c00722).
 
 Initial code is based on the work of [Loeffler et al.](https://github.com/mrnucleation/NucleationSimulationMC). We added the Vashishta potential, modified the acceptance rule, and added the ability to update the topology of the system if translation is accepted.  
 
