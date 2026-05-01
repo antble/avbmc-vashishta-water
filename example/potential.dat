@@ -1,0 +1,33 @@
+#  --------------  Atom Type Definition ----------------------------
+    define AtomTypes 2
+        # Name    |   Symbol  |  Charge    |     Mass      |
+        water_O       O        -0.943117          15.9994    
+        water_H       H         0.471558           1.008     
+    end_define
+#  --------------  Parameter set Definition ----------------------------
+    define paramTypes_2body 3
+        # Name     |     Members    |  H         |  eta     |   r4s         |     D         |     W    
+        water_[O-O]    1     1         1232.69421       7.617388        1.965379         91.090399         10.599231 
+        water_[H-H]    2     2         0.0              7.391415        1.948928         0.0               0.0 
+        water_[O-H]    1     2         0.450836         13.237354       1.661659         1.428122          0.229314 
+    end_define
+
+    define paramTypes_3body 1
+        # Name          |       B       |    xi        |    r0        |     C      |   cos(theta)
+        water_[H-O-H]       259.861109        0.503514         1.232741         0.0         -0.176194   
+    end_define
+#  --------------  RMin Definition -------------------
+    define rmin custom
+        1 1   1.0   
+        2 2   0.50 
+        1 2   0.75   
+    end_define
+# --------------  Molecule 1 Construction -------------------
+    create 1
+        atoms 3
+        # |atomType|
+            1    # O
+            2    # H
+            2    # H
+        end_atoms
+    end_create

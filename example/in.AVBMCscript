@@ -1,0 +1,74 @@
+
+#-----------------------------------------------------
+#             Simulation Parameters
+#-----------------------------------------------------
+    set  rng_seed  123
+    set  distancestorage .false. 
+    set  distancecriteria .true. 
+    set  calcpressure .false. 
+    set  cycles    1000
+    set  moves     1
+    set  MoleculeTypes  1
+    set  MolMin   1
+    set  MolMax   70
+    set  Temperature  300
+    set  ScreenEcho   .false.
+    set  MultipleInputConfig   .false. 
+    set  RosenTrials  2
+    set  avbmc_distance    4.0d0
+#-----------------------------------------------------
+#           Forcefield Parameters
+#-----------------------------------------------------
+    forcefieldtype  Vashishta
+    forcefieldfile  "potential.dat"
+    set r1s 4.477392
+    set rc 5.5
+#-----------------------------------------------------
+#             Monte Carlo Move Parameters
+#-----------------------------------------------------
+set gasdensity 6e-07
+#-----------------------------------------------------
+#             Output Parameters
+#-----------------------------------------------------	
+    set  screen_outfreq       1
+    set  trajectory_outfreq   10
+    set  out_energyunits      eV
+    set  out_distunits        ang
+#-----------------------------------------------------
+#             Monte Carlo Move Type Definition
+#-----------------------------------------------------
+    MoveTypes
+        AVBMC 1
+        Singleatom_translation 10
+    End_MoveTypes
+#-----------------------------------------------------
+#             Umbrella Parameters
+#-----------------------------------------------------
+    Umbrella TempIn.txt
+        Reference 1
+        clustersize  1
+    End_Umbrella
+#-----------------------------------------------------
+#             Weighted Histogram Analysis Variables
+#-----------------------------------------------------
+    set  useWham .true.
+    set  WHAMSegLength 100000
+    set  WHAMtol  1d-7
+    set  WhamMaxIteration  30000
+    set  WhamEquilCycle  1000
+#-----------------------------------------------------
+#             Cluster Parameters
+#-----------------------------------------------------
+    boundary
+        0
+    end_boundary
+#-----------------------------------------------------
+    biasalpha               
+        0.1d0 0.1d0 0.1d0
+    end_biasalpha
+#-----------------------------------------------------
+#           Configuration Files
+#-----------------------------------------------------
+    configfile "configuration.dat"
+    gasconfigfile "gasphase.dat"
+#-----------------------------------------------------
